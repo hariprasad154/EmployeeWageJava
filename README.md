@@ -1,2 +1,6 @@
 # EmployewageJava
-# EmployeeWageJava
+
+
+
+
+Welcome to the EmployeeWageJava project
