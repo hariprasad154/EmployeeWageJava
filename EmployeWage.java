@@ -1,10 +1,11 @@
 package Day3Practice;
 
 public class EmployeWage {
-    static int WorkedHours=0;
     public class Employee{
+    	
     	public static void EmployeeAttendence (String EmployeeName,String companyName,int Wage_per_hour,int Full_day_hours,int Part_time_hour) {
     		System.out.println("Employee Attendence calculation method in the -"+companyName);
+    		int WorkedHours=0;
     		int employeeMOnthlySalary=0;		
     		int dailyWage = 0;
     		int Day=1;
@@ -49,8 +50,10 @@ public class EmployeWage {
 		EmployeWage.Employee emp2=new EmployeWage().new Employee();
 		System.out.println("emp2 attendence and"
 				+ " earnings");
-		emp2.EmployeeAttendence(" Hariprasad","Hcl",20,8,4);
+		emp1.EmployeeAttendence(" Hariprasad","Hcl",20,8,4);
 		
+		emp1.EmployeeAttendence(" Hari","TCS",20,8,4);
+		emp2.EmployeeAttendence(" prasad","TCS",20,8,4);
 		//System.out.println();
 	}
 
