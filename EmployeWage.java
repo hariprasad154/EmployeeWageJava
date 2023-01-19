@@ -1,16 +1,10 @@
 package Day3Practice;
 
 public class EmployeWage {
-	
-	static final int WAGE_PER_HOUR = 20;
-    static final int FULL_DAY_HOUR = 8;
-    static final int PART_DAY_HOUR = 4;
-<<<<<<< HEAD
     static int WorkedHours=0;
-public class Employee{
-	
-    	public static void EmployeeAttendence () {
-    		System.out.println("Employee Attendence calculation method");
+    public class Employee{
+    	public static void EmployeeAttendence (String EmployeeName,String companyName,int Wage_per_hour,int Full_day_hours,int Part_time_hour) {
+    		System.out.println("Employee Attendence calculation method in the -"+companyName);
     		int employeeMOnthlySalary=0;		
     		int dailyWage = 0;
     		int Day=1;
@@ -21,13 +15,13 @@ public class Employee{
                 switch (employeeCheck) {
                 case 1:
                 	System.out.println("Employee is Present and earned "+employeeMOnthlySalary);
-                    dailyWage = WAGE_PER_HOUR * FULL_DAY_HOUR;
-                    WorkedHours=WorkedHours+FULL_DAY_HOUR;
+                    dailyWage = Wage_per_hour * Full_day_hours;
+                    WorkedHours=WorkedHours+Full_day_hours;
                     break;
                 case 2:
                 	System.out.println("Employee is Present as part time and earned "+employeeMOnthlySalary);
-                    dailyWage = WAGE_PER_HOUR * PART_DAY_HOUR;
-                    WorkedHours=WorkedHours+PART_DAY_HOUR;
+                    dailyWage = Wage_per_hour * Part_time_hour;
+                    WorkedHours=WorkedHours+Part_time_hour;
                     break;
                 default:
                 	System.out.println("Employee is Absent and earned "+employeeMOnthlySalary);
@@ -39,87 +33,25 @@ public class Employee{
             }
             System.out.println("------------------------");
             System.out.println("Working hours is -"+WorkedHours);
-            System.out.println(employeeMOnthlySalary +"- IS the Amount Earned in the moth");
+            System.out.println(employeeMOnthlySalary +EmployeeName +" - Earned in the month");
     	
+           
     	}
+    	 
     }
 	public static void main(String[] args) {
 		EmployeWage.Employee emp1=new EmployeWage().new Employee();
 		System.out.println("emp1 attendence and"
 				+ " earnings");
-		
-		emp1.EmployeeAttendence();
+		emp1.EmployeeAttendence(" Hariprasad","TCS",20,8,4);
+		//emp1.EmployeeAttendence(" Hari","TCS",20,8,4);
 		System.out.println("###########################");
 		EmployeWage.Employee emp2=new EmployeWage().new Employee();
 		System.out.println("emp2 attendence and"
 				+ " earnings");
-		
-		emp2.EmployeeAttendence();
+		emp2.EmployeeAttendence(" Hariprasad","Hcl",20,8,4);
 		
 		//System.out.println();
-		
-=======
-<<<<<<< HEAD
-=======
-    
-    
-    static int WorkedHours=0;
->>>>>>> uc6
-	public static void main(String[] args) {
-		
-		int employeeMOnthlySalary=0;		
-		int dailyWage = 0;
-		int Day=1;
-		System.out.println("Welcome to Employee Wage");
-<<<<<<< HEAD
-        int employeeCheck = (int) (Math.random() * 10) % 3;
-        System.out.println(employeeCheck);
-        int dailyWage = 0;
-        if (employeeCheck == 1) {
-            System.out.println("Employee is Present");
-            dailyWage = WAGE_PER_HOUR * FULL_DAY_HOUR;
-        }
-        else if (employeeCheck==2) {
-        	System.out.println("Employee is Present as part time");
-            dailyWage = WAGE_PER_HOUR * PART_DAY_HOUR;
-        	
-        }
-        else {
-            System.out.println("Employee is Absent");
-        }
-        System.out.println("Daily wage => " + dailyWage);
-
-=======
-     
-        while((Day<=20) && (WorkedHours<100)){
-        	int employeeCheck = (int) (Math.random() * 10) % 3;
-            System.out.println(employeeCheck + "in the day "+Day);
-            switch (employeeCheck) {
-            case 1:
-            	System.out.println("Employee is Present and earned "+employeeMOnthlySalary);
-                dailyWage = WAGE_PER_HOUR * FULL_DAY_HOUR;
-                WorkedHours=WorkedHours+FULL_DAY_HOUR;
-                break;
-            case 2:
-            	System.out.println("Employee is Present as part time and earned "+employeeMOnthlySalary);
-                dailyWage = WAGE_PER_HOUR * PART_DAY_HOUR;
-                WorkedHours=WorkedHours+PART_DAY_HOUR;
-                break;
-            default:
-            	System.out.println("Employee is Absent and earned "+employeeMOnthlySalary);
-            	dailyWage = 0;
-            	
-            }
-            Day++;
-            
-            employeeMOnthlySalary=employeeMOnthlySalary+dailyWage;
-        	
-        }
-        System.out.println("------------------------");
-        System.out.println(WorkedHours);
-        System.out.println(employeeMOnthlySalary +"-- IS the Amount Earned in the moth");
->>>>>>> uc6
->>>>>>> master
 	}
 
 }
